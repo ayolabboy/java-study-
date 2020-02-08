@@ -2,4 +2,6 @@
 <typeInfoHistroy>
 <typeInfo handle="=Membership/src=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.service{UserService.java[UserService" modifiers="513" timestamp="1580546536251"/>
 <typeInfo handle="=Membership/src=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.dao{UserDao.java[UserDao" modifiers="513" timestamp="1580546303807"/>
+<typeInfo handle="=JdbcTemplateDemo/src=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.dao{MemberDao.java[MemberDao" modifiers="513" timestamp="1581122725858"/>
+<typeInfo handle="=JdbcTemplateDemo/src=/optional=/true=/=/maven.pomderived=/true=/&lt;com.example.service{MemberService.java[MemberService" modifiers="513" timestamp="1581122620135"/>
 </typeInfoHistroy>

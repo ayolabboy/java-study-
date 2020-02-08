@@ -1,9 +1,0 @@
-package com.example;
-
-public class Imployee {
-	private String name;
-	private int age;
-	
-	
-
-}

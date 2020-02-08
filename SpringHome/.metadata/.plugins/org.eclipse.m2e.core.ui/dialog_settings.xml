@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="wizardPage">
 		<list key="groupId">
+			<item value="JdbcTemplateDemo"/>
 			<item value="Membership"/>
 			<item value="SpringJdbcDemo"/>
 			<item value="SpringLifeCycle"/>
@@ -12,6 +13,7 @@
 		<list key="name">
 		</list>
 		<list key="artifactId">
+			<item value="JdbcTemplateDemo"/>
 			<item value="Membership"/>
 			<item value="SpringJdbcDemo"/>
 			<item value="SpringLifeCycle"/>

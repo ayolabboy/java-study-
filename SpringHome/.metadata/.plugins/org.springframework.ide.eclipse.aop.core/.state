@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
 <aop-project name="HelloWeb"/>
+<aop-project name="JdbcTemplateDemo"/>
 <aop-project name="StartSpring"/>
 <aop-project name="SpringJdbcDemo"/>
+<aop-project name="HelloWorldWeb"/>
 <aop-project name="Membership"/>
 <aop-project name="SpringDemo3"/>
 <aop-project name="HelloWorld"/>
