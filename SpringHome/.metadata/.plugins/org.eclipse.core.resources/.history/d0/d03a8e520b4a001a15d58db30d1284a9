@@ -1,0 +1,15 @@
+package com.example.vo;
+
+public class MemberVO {
+	private String userid;
+	private String name;
+	private int age;
+	public MemberVO(String userid, String name, int age) {
+		super();
+		this.userid = userid;
+		this.name = name;
+		this.email = email;
+	}
+	
+	
+}

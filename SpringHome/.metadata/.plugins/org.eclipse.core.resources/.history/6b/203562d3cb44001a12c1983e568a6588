@@ -1,0 +1,15 @@
+package com.example.test;
+
+import org.junit.Test;
+
+public class MembershipTest {
+
+	@Autowired UserService service;
+
+	
+	@Test
+	public void test() {
+		
+	}
+
+}

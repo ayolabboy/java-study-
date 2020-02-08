@@ -1,0 +1,21 @@
+package com.example.test;
+
+import static org.junit.Assert.assertNotNull;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+@RunWith(SpringJUnit4ClassRunner.class) 
+@ContextConfiguration(locations="classpath:beans.xml") 
+public class MyTest {
+	@Autowired
+	MemberService memberService;
+	@Test
+	public void test() {
+		assertNotNull(this.ctx);
+	}
+
+}

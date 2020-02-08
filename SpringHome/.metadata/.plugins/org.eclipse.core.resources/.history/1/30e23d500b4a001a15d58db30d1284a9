@@ -1,0 +1,9 @@
+package com.example.vo;
+
+public class MemberVO {
+	private String userid;
+	private String name;
+	private String email;
+	
+	
+}

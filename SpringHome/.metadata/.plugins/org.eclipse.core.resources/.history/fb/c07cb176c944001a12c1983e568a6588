@@ -1,0 +1,22 @@
+package com.example.dao;
+
+import java.util.List;
+
+import com.example.vo.UserVO;
+
+public interface UserDao {
+	// create
+	void insertUser(UserVO user);
+	
+	// read all
+	List<UserVO> getUserList();
+	
+	// delete
+	void deleteUser(String id);
+	
+	// read 
+	UserVO getUser(String id);
+	
+	// update
+	void updateUser(UserVO user);
+}

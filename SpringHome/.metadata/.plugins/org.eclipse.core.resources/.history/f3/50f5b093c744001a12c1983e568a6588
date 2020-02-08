@@ -1,0 +1,21 @@
+package com.example.service;
+
+import java.util.List;
+import com.example.vo.UserVO;
+
+public interface UserService {
+	// create
+	void insertUser(UserVO user);
+	
+	// read
+	List<UserVO> getUserList();
+	
+	// delete
+	void deleteUser(String id);
+	
+	UserVO getUser(String id);
+	
+	// update
+	void updateUser(UserVO user);
+
+}

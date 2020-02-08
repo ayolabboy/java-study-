@@ -1,0 +1,16 @@
+package com.example.test;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class MyTest {
+	ApplicationContext ctx;
+	
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

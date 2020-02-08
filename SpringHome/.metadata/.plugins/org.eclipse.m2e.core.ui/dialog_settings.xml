@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="wizardPage">
+		<list key="groupId">
+			<item value="Membership"/>
+			<item value="SpringJdbcDemo"/>
+			<item value="SpringLifeCycle"/>
+			<item value="SpringDemo3"/>
+			<item value="StartSpring"/>
+			<item value="HelloWorld"/>
+		</list>
+		<list key="name">
+		</list>
+		<list key="artifactId">
+			<item value="Membership"/>
+			<item value="SpringJdbcDemo"/>
+			<item value="SpringLifeCycle"/>
+			<item value="SpringDemo3"/>
+			<item value="StartSpring"/>
+			<item value="HelloWorld"/>
+		</list>
+		<list key="version">
+			<item value="0.0.1-SNAPSHOT"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+		<list key="ciManagementUrl">
+		</list>
+		<list key="ciManagementSystem">
+		</list>
+		<list key="issueManagementSystem">
+		</list>
+		<list key="issueManagementUrl">
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

@@ -1,0 +1,13 @@
+package com.example;
+
+public class MainClass {
+	public static void main(String[] args) {
+		GenericXmlApplicationContext context = new GenericXmlApplicationContext();
+		context.load("classpath:applicationContext.xml");
+		context.refresh();
+		Student student1 = context.getBean("student1", Student.class);
+		System.out.println(student1);
+		context.close();
+	}
+
+}

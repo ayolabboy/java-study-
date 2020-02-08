@@ -1,0 +1,31 @@
+package com.example.test;
+
+import static org.junit.Assert.assertNotNull;
+
+import org.junit.Before;
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+import org.springframework.stereotype.Component;
+
+import com.example.service.MemberService;
+
+@Component
+public class MyTest {
+	ApplicationContext ctx;
+	
+	@Autowired
+	MemberService memberService;
+	
+	@Before
+	public void init() {
+		this.ctx = new GenericXmlApplicationContext("classpath:beans.xml");
+	}
+
+	@Test
+	public void test() {
+		assertNotNull(this.ctx);
+	}
+
+}

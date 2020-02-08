@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	<!-- way 2 -->
+	<!-- <context:property-placeholder location="classpath:info.properties" /> 
+	<bean id="student1" class="com.example.Student">
+		<constructor-arg value="${user1.name}" />
+		<constructor-arg value="${user1.age}" />
+		<constructor-arg>
+			<list>
+				<value>${user1.hobby1}</value>
+				<value>${user1.hobby2}</value>
+				<value>${user1.hobby3}</value>
+			</list>
+		</constructor-arg>
+		<property name="height" value="${user1.height}" />
+		<property name="weight">
+			<value>"${user1.weight}"</value>
+		</property>
+	</bean> -->
+	
+	<!-- way 3 어노테이션 인식시키는 방법 -->
+	<!-- 1 -->
+	<!-- <context:annotation-config></context:annotation-config> -->
+	<!-- 2 -->
+	<!-- <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor" /> -->	
+	<!-- 3 init-method, destroy-method , * ctrl + space bar-->
+	<bean id="emp1" class="com.example.Employee" init-method="initMEthod" destroy-method="destroyMethod">
+		<constructor-arg name="name" value="박지만"></constructor-arg>
+		<constructor-arg name="age" value="35"></constructor-arg>
+	</bean>
+	
+	<!-- way 4, 외부파일을 이용한 설정 중 어노테이션 사용 -->
+	 <context:property-placeholder location="classpath:info.properties" /> 
+	 <context:component-scan base-package="com.example" /> 
+	 <bean id="student5" class="com.example.Student">
+
+	</bean> 
+</beans>

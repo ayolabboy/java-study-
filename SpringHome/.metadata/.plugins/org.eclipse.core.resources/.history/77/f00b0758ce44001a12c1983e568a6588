@@ -1,0 +1,65 @@
+package com.example.test;
+
+import static org.junit.Assert.assertEquals;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
+
+import com.example.service.UserService;
+import com.example.vo.UserVO;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(locations = "classpath:beans.xml")
+public class MembershipTest {
+
+	@Autowired
+	UserService userService;
+
+	@Test
+	public void test() {
+		// 사용자 조회 test
+		UserVO user = userService.read("jimin");
+		System.out.println(user);
+		assertEquals("한지민", user.getName());
+	}
+
+	@Override
+	public UserVO read(String id) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		UserVO userVO = null;
+		try {
+			conn = this.dataSource.getConnection();
+			pstmt = conn.prepareStatement("SELECT * FROM users WHERE userid = ?");
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			rs.next();
+			userVO = new UserVO(rs.getString("userid"), rs.getString("name"), rs.getString("gender"),
+					rs.getString("city"));
+		} catch (SQLException ex) {
+			System.out.println(ex);
+		} finally {
+			try {
+				if (conn != null)
+					conn.close();
+				if (pstmt != null)
+					pstmt.close();
+				if (rs != null)
+					rs.close();
+			} catch (SQLException ex) {
+				System.out.println(ex);
+			}
+		}
+		return userVO;
+	}
+
+}

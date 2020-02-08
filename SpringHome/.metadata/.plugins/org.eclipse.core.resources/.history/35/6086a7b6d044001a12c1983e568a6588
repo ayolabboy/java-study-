@@ -1,0 +1,77 @@
+package com.example.dao;
+
+import java.util.List;
+
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.example.vo.UserVO;
+
+@Repository("userDao")
+public class UserDaoImple implements UserDao {
+
+	private DataSource dataSource;
+
+	@Autowired
+	public void setDataSource(DataSource dataSource) {
+		this.dataSource = dataSource;
+	}
+
+	@Override
+	public void insertUser(UserVO user) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public List<UserVO> readAll() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void deleteUser(String id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public UserVO read(String id) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		UserVO userVO = null;
+		try {
+			conn = this.dataSource.getConnection();
+			pstmt = conn.prepareStatement("SELECT * FROM users WHERE userid = ?");
+			pstmt.setString(1, id);
+			rs = pstmt.executeQuery();
+			rs.next();
+			userVO = new UserVO(rs.getString("userid"), rs.getString("name"), rs.getString("gender"),
+					rs.getString("city"));
+		} catch (SQLException ex) {
+			System.out.println(ex);
+		} finally {
+			try {
+				if (conn != null)
+					conn.close();
+				if (pstmt != null)
+					pstmt.close();
+				if (rs != null)
+					rs.close();
+			} catch (SQLException ex) {
+				System.out.println(ex);
+			}
+		}
+		return userVO;
+	}
+
+	@Override
+	public void updateUser(UserVO user) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

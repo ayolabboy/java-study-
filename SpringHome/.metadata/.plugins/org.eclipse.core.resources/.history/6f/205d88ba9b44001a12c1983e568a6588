@@ -1,0 +1,15 @@
+package com.example.test;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.GenericXmlApplicationContext;
+
+public class BeanTest {
+	ApplicationContext ctx;
+	
+	//@Before
+	public void init() {
+		this.ctx = new GenericXmlApplicationContext("classpath:beans.xml");
+	}
+	
+	
+}

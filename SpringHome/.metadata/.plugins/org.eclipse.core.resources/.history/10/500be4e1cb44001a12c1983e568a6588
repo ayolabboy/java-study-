@@ -1,0 +1,17 @@
+package com.example.test;
+
+import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.example.service.UserService;
+
+public class MembershipTest {
+
+	@Autowired UserService service;
+	
+	@Test
+	public void test() {
+		
+	}
+
+}
