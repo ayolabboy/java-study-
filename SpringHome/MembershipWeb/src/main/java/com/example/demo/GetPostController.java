@@ -4,8 +4,11 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+import com.example.vo.UserVO;
 
 @Controller
 public class GetPostController {
@@ -21,10 +24,27 @@ public class GetPostController {
 	 
 	 return "create"; }
 	 
+	 
 /*
 	@RequestMapping(value = "/create", method = RequestMethod.POST)
 	public String confirm(UserVO userVO) {
 		return "create";
 	}
 	*/
+	/*
+	 * @RequestMapping(value = "/create/{userid}/{name}/{gender}", method =
+	 * RequestMethod.GET) public String confirm(
+	 * 
+	 * @PathVariable String userid,
+	 * 
+	 * @PathVariable String name,
+	 * 
+	 * @PathVariable String gender,
+	 * 
+	 * @PathVariable String city, Model model) {
+	 * 
+	 * UserVO uservo = new UserVO(userid,name,gender,city);
+	 * model.addAttribute("userVO", uservo); return "create"; }
+	 */
+	 
 }
