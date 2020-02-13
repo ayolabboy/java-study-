@@ -1,49 +1,62 @@
 package coding_test_preperation;
 
-import java.util.Scanner;
-
 public class whiteboard {
 
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+
+		int[][] goods = new int[][] { { 25400, 2 }, { 10000, 1 }, { 31600, 1 } };
+		int[][] coupons = new int[][] { { 5, 3 }, { 23, 2 }, { 11, 2 }, { 9, 5 } };
 		
-		int a = sc.nextInt();
-		int a_len = (int)(Math.log10(a)+1);
+		int[] price_arr = new int[goods.length];
+
+		int i = 0;
+		int j = 0;
 		
-		String b = sc.next();
-		int b_len = b.length();
-		int b_n = Integer.parseInt(b); 
+		int err = 0;
 
-		if (a_len == 3 && b_len == 3) {
-			// 문자열 분할
-			String b_3th = b.substring(0, 1); 
-			String b_2nd = b.substring(1, 2);
-			String b_1st = b.substring(2, 3);
-			
-			int b_3th_n = Integer.parseInt(b_3th); 
-			int b_2nd_n = Integer.parseInt(b_2nd);
-			int b_1st_n = Integer.parseInt(b_1st);
-
-			int line_1 = b_1st_n * a;
-			int line_2 = b_2nd_n * a;
-			int line_3 = b_3th_n * a;
-			
-			System.out.println("   "+ a);
-			System.out.println(" x " + b);
-			System.out.println("------");
-
-			System.out.println("  "+line_1);
-			System.out.println(" "+line_2);
-			System.out.println(line_3);	
-			System.out.println("------");
-			
-			System.out.println(a * b_n);
-
-		} else {
-			System.out.println("자리수 애러");
+		// 가격 입력처리
+		for (i = 0; i < goods.length; i++) {
+			for (j = 0; j < 2; j++) {			
+				
+				if(j == 0) { // 가격 만 따로 저장						
+					if(goods[i][j] < 100 || goods[i][j] > 100000) { // 입력 예외처리
+						err = 1;
+						break;
+					}					
+					price_arr[i] = goods[i][j];	
+				}else { // 수량
+					if(goods[i][j] < 1 || goods[i][j] > 10) { // 입력 예외처리
+						err = 1;
+						break;
+					}	
+				}
+			}
 		}
+		
+		// 쿠폰 입력 처리
+		for (i = 0; i < coupons.length; i++) {
+			for (j = 0; j < 2; j++) {			
+				
+				if(j == 0) { 					
+					if(coupons[i][j] < 1 || coupons[i][j] > 100) { // 입력 예외처리
+						err = 1;
+						break;
+					}						
+				}else { // 수량
+					if(coupons[i][j] < 1 || coupons[i][j] > 10000) { // 입력 예외처리
+						err = 1;
+						break;
+					}	
+				}
+			}
+		}
+		
+		System.out.println(err);
+		
+		
+		
+		
 
-		sc.close();
 	}
 
 }

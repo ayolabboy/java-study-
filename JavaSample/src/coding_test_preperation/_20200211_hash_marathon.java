@@ -28,7 +28,7 @@ public class _20200211_hash_marathon {
 	        String[] completion = new String[] { "A","B","C" };
 	        
 	        for (String player : participant) {
-	        	hm.put(player, hm.getOrDefault(player, 0) + 1);	
+	        	hm.put(player, hm.getOrDefault(player, 0) + 1);	//hm A 에 값이 있냐 >> 없으면 0을 넣어라. 그다음에 1을 더해라. 그거를 A에 넣어라. 
 	        }       
 
 	        System.out.println("debugging1") ;
