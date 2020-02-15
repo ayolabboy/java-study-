@@ -39,7 +39,7 @@
 		<item key="patterns" value="*"/>
 	</section>
 	<section name="ClasspathContainerSelectionPage">
-		<item key="index" value="2"/>
+		<item key="index" value="7"/>
 	</section>
 	<section name="BuildPathsPropertyPage">
 		<item key="pageIndex" value="3"/>

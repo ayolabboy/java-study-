@@ -6,8 +6,14 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="biz"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="aopalliance-1.0"/>
+			<item value="aopalliance-1.0.jar"/>
+			<item value="aopalliance-1.0.jar "/>
+			<item value="1.6"/>
+			<item value="jstl"/>
+			<item value="springDispatcherServlet"/>
 			<item value="biz"/>
 			<item value="dataSource"/>
 			<item value="userDao"/>
