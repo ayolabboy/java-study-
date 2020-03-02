@@ -150,7 +150,7 @@
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
       <!-- <Context docBase="HelloWeb" path="/biz" reloadable="true" source="org.eclipse.jst.jee.server:HelloWeb"/> -->
-      <Context docBase="C:\SpringHome\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\ROOT" path="" reloadable="false"/><Context docBase="C:\SpringHome\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\HelloWorldWeb" path="/biz" reloadable="true" source="org.eclipse.jst.jee.server:HelloWorldWeb"/><Context docBase="C:\SpringHome\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\MVCDemo" path="/MVCDemo" reloadable="true" source="org.eclipse.jst.jee.server:MVCDemo"/><Context docBase="C:\SpringHome\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\MembershipWeb" path="/demo" reloadable="true" source="org.eclipse.jst.jee.server:MembershipWeb"/></Host>
+      <Context docBase="C:\SpringHome\.metadata\.plugins\org.eclipse.wst.server.core\tmp0\wtpwebapps\MybatisDemo" path="" reloadable="true" source="org.eclipse.jst.jee.server:MybatisDemo"/></Host>
     </Engine>
   </Service>
 </Server>

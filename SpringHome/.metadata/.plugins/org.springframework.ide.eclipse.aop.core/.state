@@ -4,9 +4,11 @@
 <aop-project name="JdbcTemplateDemo"/>
 <aop-project name="StartSpring"/>
 <aop-project name="SpringJdbcDemo"/>
+<aop-project name="MVCDemo"/>
 <aop-project name="HelloWorldWeb"/>
 <aop-project name="Membership"/>
 <aop-project name="SpringDemo3"/>
 <aop-project name="HelloWorld"/>
 <aop-project name="SpringLifeCycle"/>
+<aop-project name="MembershipWeb"/>
 </aop-reference-model>
